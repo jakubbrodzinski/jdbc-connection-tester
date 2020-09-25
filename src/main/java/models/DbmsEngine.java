@@ -1,5 +1,9 @@
-package connection;
+package models;
 
+import connection.JdbcConnector;
+import connection.MariaDbJdbcConnector;
+import connection.MySqlJdbcConnector;
+import connection.OracleJdbcConnector;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -9,7 +13,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @Getter
 public enum DbmsEngine {
-    MARIADB("mariadb", "org.mariadb.jdbc.Driver", MySqlJdbcConnector.class),
+    MARIADB("mariadb", "org.mariadb.jdbc.Driver", MariaDbJdbcConnector.class),
     MYSQL("mysql", "com.mysql.jdbc.Driver", MySqlJdbcConnector.class),
     ORACLE("oracle", "oracle.jdbc.OracleDriver", OracleJdbcConnector.class);
 

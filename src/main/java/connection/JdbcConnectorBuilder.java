@@ -1,5 +1,8 @@
 package connection;
 
+import models.DbmsEngine;
+import models.JdbcProperty;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
@@ -16,7 +19,7 @@ public class JdbcConnectorBuilder<T extends JdbcConnector> {
     }
 
     public static JdbcConnectorBuilder<?> empty() {
-        return new JdbcConnectorBuilder<>(new HashMap<JdbcProperty, String>());
+        return new JdbcConnectorBuilder<>(new HashMap<>());
     }
 
     public JdbcConnectorBuilder<T> with(JdbcProperty jdbcProperty, String propertyValue) {

@@ -1,5 +1,8 @@
 package connection;
 
+import models.JdbcProperty;
+import lombok.ToString;
+
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.Driver;
@@ -7,6 +10,7 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.Properties;
 
+@ToString
 public abstract class JdbcConnector {
     private final String jdbcUrl;
     private final Class<? extends Driver> driverClazz;
