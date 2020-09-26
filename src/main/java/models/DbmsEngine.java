@@ -14,7 +14,7 @@ import java.util.Optional;
 @Getter
 public enum DbmsEngine {
     MARIADB("mariadb", "org.mariadb.jdbc.Driver", MariaDbJdbcConnector.class),
-    MYSQL("mysql", "com.mysql.jdbc.Driver", MySqlJdbcConnector.class),
+    MYSQL("mysql", "com.mysql.cj.jdbc.Driver", MySqlJdbcConnector.class),
     ORACLE("oracle", "oracle.jdbc.OracleDriver", OracleJdbcConnector.class);
 
     private final String key;
